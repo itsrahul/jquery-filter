@@ -110,7 +110,7 @@ class Contact
 }
 
 $(document).ready(function() {
-  details  = {
+  let details  = {
     $displayElement: $("#result"),
     $nameElement: $("input[id=name]"),
     $emailElement: $("input[id=email]"),
