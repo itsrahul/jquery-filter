@@ -104,6 +104,10 @@ class Contact
   {
     const pattern = /^\w{3,}@[a-zA-Z]{3,}[.][a-z]{2,}$/;
     let result = email.match(pattern);
+    if(result == null)
+    {
+      window.alert("Please enter valid email")
+    }
     return (name!= null && email != null && result!= null) ? true : false;
   }
 
