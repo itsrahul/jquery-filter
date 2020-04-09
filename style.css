@@ -3,12 +3,11 @@
   display: flex;
 }
 
-
 .grid {
   border: 2px solid;
   font-size: 15px;
-	width: 120px;
-	height: 120px;
+  width: 120px;
+  height: 120px;
   padding: 5px;
   margin: 5px;
   word-wrap: break-word;
