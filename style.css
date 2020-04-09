@@ -17,10 +17,9 @@
 .list {
   border: 2px solid burlywood;
   font-size: 15px;
-	width: 200px;
+  width: 200px;
   height: 120px;
   margin: 5px;
-  text-align: left;
   word-wrap: break-word;
 }
 
