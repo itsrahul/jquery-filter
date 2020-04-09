@@ -31,11 +31,25 @@ class ContactManager
   bindEvents()
   {
     this.$addButtonElement.on("click", () => this.onClickAdd());
-    this.$searchInputElement.on("keyup", () => this.filterContact($(event.target).val()) )
-    this.$switchViewButtonElement.on("click", () => {
-      (this.currentView == "list") ? this.currentView = "grid" : this.currentView = "list";
-      this.filterContact(this.$searchInputElement.val());
-    });
+    this.$searchInputElement.on("keyup", () => this.filterContact($(event.target).val()) );
+    this.$switchViewButtonElement.on("click", () => this.onSwitchView() );
+  }
+
+  onSwitchView()
+  {
+    if (this.currentView == "list")
+    {
+      this.currentView = "grid"
+      this.$displayElement.css('flex-direction', 'row');
+    }
+    else
+    {
+      this.currentView = "list";
+      this.$displayElement.css('flex-direction', 'column');
+    }
+
+    this.filterContact(this.$searchInputElement.val());
+  
   }
 
   onClickAdd()
