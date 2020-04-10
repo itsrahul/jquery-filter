@@ -27,7 +27,6 @@ export default class Display
   displayContacts()
   {
     let contactArray = null;
-    // FIXME_AB: should handle this duplicacy
     if(this.manager.filteredContacts == null)
     {
       contactArray = this.manager.contactList;
